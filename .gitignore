@@ -27,3 +27,12 @@ replay_pid*
 .idea
 .vscode
 .zed
+.replit
+replit.nix
+
+# replit
+.settings
+.project
+target
+.upm
+.breakpoints
