@@ -11,4 +11,8 @@ From there, other instances should be clients. The clients connect to the server
 # W.I.P
 
 ### TODO:
+- Test Server and Client
+- Add a Server Loop and Client Loop
+- Create ServerMain and ClientMain
+- Work on Terminal Parsing and Terminal Loop
 
