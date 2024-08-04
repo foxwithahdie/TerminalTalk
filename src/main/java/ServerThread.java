@@ -63,13 +63,13 @@ class RequestHandler extends Thread {
 
     @Override
     public void run() {
-        System.out.println("There was a connection");
+        System.out.println("Socket " + this.socket + " connected");
 
         socket.println("> Server: Welcome!");
 
-        String line = socket.readLine();
+        String line = this.socket.readLine();
         while (line != null && !line.isEmpty()) {
-            socket.println("> Server: " + line);
+            this.socket.println("> Server: " + line);
             line = socket.readLine();
         }
 

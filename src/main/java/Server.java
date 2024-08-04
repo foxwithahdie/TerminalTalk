@@ -10,9 +10,9 @@ public class Server implements AutoCloseable {
     private static final int maxConnected = 2;
     public static final ArrayList<Server> prevServers = new ArrayList<>(
             Arrays.stream(new File("src/main/resources/aliases").listFiles())
-                    .mapToInt(file -> Integer.parseInt(
-                            file.getName().substring(file.getName().indexOf("port") + "port".length(), file.getName().indexOf('.')
-                            ))).mapToObj(Server::new).toList());
+                    .mapToInt(file -> Integer.parseInt(file.getName()
+                            .substring(file.getName().indexOf("port") + "port".length(), file.getName().indexOf('.'))))
+                    .mapToObj(Server::new).toList());
 
     public HashMap<Inet4Address, ArrayList<String>> aliasDatabase;
     public HashMap<Inet4Address, String> messageDatabase;
