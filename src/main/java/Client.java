@@ -14,7 +14,14 @@ public class Client {
     private Server connection;
 
     public Client() {
+        try {
+            this.ip = (Inet4Address) InetAddress.getLocalHost();
+        } catch (UnknownHostException e) {
+            System.out.println("Client IP not functional.");
+            throw new RuntimeException(e);
+        }
 
+        this.port = -1;
     }
 
     public void connect() {

@@ -23,7 +23,7 @@ dependencies {
 group = "foxwithahdie"
 version = "0.0-SNAPSHOT"
 description = "terminal-talk"
-java.sourceCompatibility = JavaVersion.VERSION_1_8
+java.sourceCompatibility = JavaVersion.VERSION_22
 
 publishing {
     publications.create<MavenPublication>("maven") {
